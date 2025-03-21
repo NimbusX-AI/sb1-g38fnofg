@@ -1,0 +1,40 @@
+---
+const solutions = [
+  {
+    title: "Evaluation & Optimization",
+    description: "Assess existing environment and develop a strategic roadmap for a stronger security posture—while identifying cost inefficiencies to help fund enterprise-grade protection."
+  },
+  {
+    title: "Compliant Security",
+    description: "Providing comprehensive, compliant security across your systems, applications, multi-cloud infrastructure, and devices—while also defining policies and empowering users through training."
+  },
+  {
+    title: "Cost-Effective Security Management",
+    description: "Providing flexible monitoring and management—whether for specific components or your entire system—at a predictable, budget-friendly monthly rate."
+  },
+  {
+    title: "Reliable Continuity & Recovery",
+    description: "Implementing BC/DR solutions to ensure business resilience, with swift restoration capabilities that minimize downtime—even in the face of a security breach."
+  }
+];
+---
+
+<section id="solutions" class="py-24 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-primary mb-4">Security Without Compromise</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        With over two decades of expertise in managed infrastructure, networking, and applications, BlackCert understands IT inside and out—making us uniquely positioned to secure it.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      {solutions.map(solution => (
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+          <h3 class="text-2xl font-bold text-primary mb-4">{solution.title}</h3>
+          <p class="text-gray-600">{solution.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

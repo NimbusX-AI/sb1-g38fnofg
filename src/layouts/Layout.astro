@@ -1,0 +1,38 @@
+---
+import '@fontsource-variable/inter';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title,
+  description = "BlackCert - Full-Stack Security Solutions for Modern Businesses"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="min-h-screen bg-white">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --accent: 99, 91, 255;
+    --accent-light: 0, 212, 255;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

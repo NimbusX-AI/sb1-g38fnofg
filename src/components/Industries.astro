@@ -1,0 +1,36 @@
+---
+const industries = [
+  "Financial Services",
+  "Healthcare",
+  "Life Sciences",
+  "Government & Defense",
+  "Legal",
+  "Insurance",
+  "Energy & Utilities",
+  "Manufacturing & Industrial",
+  "Retail & E-Commerce",
+  "Telecommunications",
+  "Entertainment",
+  "Higher Education",
+  "Research & Development"
+];
+---
+
+<section class="py-24 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-primary mb-4">Trusted by Industry Leaders</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Organizations of all sizes and industries have trusted BlackCert to embed compliant security throughout their IT, enabling them to work without worry.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-4">
+      {industries.map(industry => (
+        <span class="px-6 py-3 bg-white rounded-full text-primary shadow-sm">
+          {industry}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>

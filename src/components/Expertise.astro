@@ -1,0 +1,82 @@
+---
+const certifications = {
+  architecture: [
+    "Microsoft Gold Certified",
+    "AWS Architecture, DevOps",
+    "Azure Architecture, DevOps",
+    "VMware",
+    "RedHat",
+    "Cisco",
+    "Office 365 Applications",
+    "Office 365 Messaging"
+  ],
+  security: [
+    "Palo Alto",
+    "Ethical Hacker",
+    "CompTIA Security",
+    "Office 365 Security",
+    "Microsoft Defender",
+    "Azure Sentinel",
+    "Purview"
+  ],
+  databases: [
+    "Oracle",
+    "MS SQL",
+    "Power BI",
+    "MySQL"
+  ],
+  compliance: [
+    "PCI",
+    "SOC",
+    "HIPAA/HITRUST",
+    "GDPR",
+    "ISO"
+  ]
+};
+---
+
+<section id="expertise" class="py-24">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-primary mb-4">Certified Expertise</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Our team is deeply immersed in IT, security, and compliance, holding top cloud, network, and security certifications—continuously expanding our expertise to stay ahead of evolving threats.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-secondary mb-4">Architecture</h3>
+        <ul class="space-y-2">
+          {certifications.architecture.map(cert => (
+            <li class="text-gray-600">{cert}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-secondary mb-4">Security</h3>
+        <ul class="space-y-2">
+          {certifications.security.map(cert => (
+            <li class="text-gray-600">{cert}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-secondary mb-4">Databases</h3>
+        <ul class="space-y-2">
+          {certifications.databases.map(cert => (
+            <li class="text-gray-600">{cert}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-secondary mb-4">Compliance</h3>
+        <ul class="space-y-2">
+          {certifications.compliance.map(cert => (
+            <li class="text-gray-600">{cert}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

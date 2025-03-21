@@ -1,0 +1,50 @@
+---
+const navItems = [
+  { text: "Solutions", href: "#solutions" },
+  { text: "Consulting", href: "#consulting" },
+  { text: "Expertise", href: "#expertise" },
+  { text: "Resources", href: "#resources" }
+];
+---
+
+<header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 py-4 shadow-sm">
+  <div class="container mx-auto px-4">
+    <nav class="flex items-center justify-between">
+      <a href="/" class="flex items-center">
+        <img 
+          src="/logo.png" 
+          alt="BlackCert" 
+          class="h-8 md:h-10"
+          width="200"
+          height="40"
+        />
+      </a>
+      
+      <div class="hidden md:flex items-center gap-8">
+        {navItems.map(item => (
+          <a 
+            href={item.href}
+            class="text-primary hover:text-secondary transition-colors"
+          >
+            {item.text}
+          </a>
+        ))}
+        <a 
+          href="#contact" 
+          class="bg-secondary text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+
+      <button 
+        class="md:hidden text-primary"
+        aria-label="Menu"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
